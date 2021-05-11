@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # resources :timesheets
+  root "timesheets#new", as: "root"
   get "/timesheets", to: "timesheets#index", as: "timesheets"
   post "/timesheets", to: "timesheets#create"
   get "/timesheets/new", to: "timesheets#new", as: "new_timesheet"
